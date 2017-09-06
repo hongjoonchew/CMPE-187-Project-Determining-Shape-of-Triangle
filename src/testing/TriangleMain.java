@@ -7,10 +7,6 @@ package testing;
  */
 
 public class TriangleMain {
-	/* Main function goes here
-	* Perhaps run a txt file as an Object and read the contents to get x,y and z integers.
-	* However for now, run this by running the integers through the terminal.
-	*/
 	private int x;
 	private int y;
 	private int z;
@@ -21,18 +17,23 @@ public class TriangleMain {
 		this.z = z;
 	}
 	
-	
 	/*
 	 * This first test tests if the current three integers are a triangle.
 	 */
 	public void testTriangle() {
-		if (x+y > z && x+z > y && y+z > x) {
-			System.out.println("The current integers are a triangle");
-			testTriangleShape();
+		//Negative integers check.
+		if (x < 0 || y < 0 || z < 0) {
+			System.out.println("One of the integers is a negative integer. Please try again.");
 		}
 		else {
-			System.out.println("The current integers are not a triangle.");
-			System.exit(0);
+			//Triangle Inequality Theorem
+			if (x+y > z && x+z > y && y+z > x) { 
+				System.out.println("The current integers are a triangle");
+				testTriangleShape();
+			}
+			else {
+				System.out.println("The current integers are not a triangle.");
+			}
 		}
 	}
 	
@@ -40,9 +41,25 @@ public class TriangleMain {
 	 * This method is to test what shape is the triangle.
 	 */
 	public void testTriangleShape() {
-		
+		//Test for equilateral triangle.
+		if (x == y && y == z && x == z) {
+			System.out.println("All 3 integers are of same value, therefore it is an equilateral triangle.");
+		}
+		//Test for isosceles triangle.
+		else if((x == y && y != z) || (y == z && x != z) || (x == z && y != z) ) {
+			System.out.println("2 integers are of the same value, therefore it is an isosceles triangle");
+		}
+		//If both test fails, it should default to a scalene triangle.
+		else {
+			System.out.println("The 3 integers represent a scalene triangle.");
+		}
 	}
 	
+	/*
+	 * 
+	 * Main function, where the tests are initialized. The tests will run through a sequence
+	 * of methods, similar to a flowchart.
+	 */
 	public static void main(String[] args) {
 		if (args.length < 3) {
 			System.out.println("Not enough arguments");
