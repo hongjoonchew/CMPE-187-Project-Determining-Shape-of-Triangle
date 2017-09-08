@@ -51,12 +51,12 @@ public class FileTest {
         return numbers;		// Return the 2D ArrayList
     }
     
-    public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> list = FileTest.readInFromFile("testFile.txt");
-        
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
-    }
+//    public static void main(String[] args) {
+//        ArrayList<ArrayList<Integer>> list = FileTest.readInFromFile("testFile.txt");
+//        
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println(list.get(i));
+//        }
+//    }
     
 }
