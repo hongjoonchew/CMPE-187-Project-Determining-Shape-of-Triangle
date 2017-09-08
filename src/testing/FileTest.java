@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class accepts a file for the test cases. It returns a 2D array, where a line of 
+ * integers from the file will represent a one dimensional ArrayList inside the 2D 
+ * ArrayList
  */
 package testing;
 
@@ -25,20 +25,22 @@ public class FileTest {
         
         try {
             scanner = new Scanner(file);
-            int i = 0;
-            /* check  */
+            int i = 0;	// Counter for the ArrayList;
+            /* check if there is content on the next line*/
             while(scanner.hasNextLine()) {
+            	/* Add an ArrayList to represent the line */
                 numbers.add(new ArrayList<Integer>());
                 String currentLine = scanner.nextLine();
-                String[] words = currentLine.split(" ");
+                /* Split up the numbers into an array */
+                String[] nums = currentLine.split(" ");
                 
-                for (String word: words) {
-                    try {
-                        int num = Integer.parseInt(word);
-                        numbers.get(i).add(num);
-                    } catch (NumberFormatException e) {}             
+                for (String num: nums) {
+                    try {	// Only add integers into the ArrayList
+                        int oneNum = Integer.parseInt(num);
+                        numbers.get(i).add(oneNum);
+                    } catch (NumberFormatException e) {} // Catch anything that is not an integer            
                 }
-                i++;
+                i++;	// increment the counter to move to the next Integer ArrayList in the 2D ArrayList
             }
         } catch (FileNotFoundException e) {
             System.out.println(file.toString() + " was not found");
@@ -46,7 +48,7 @@ public class FileTest {
         	scanner.close();
         }
       
-        return numbers;
+        return numbers;		// Return the 2D ArrayList
     }
     
     public static void main(String[] args) {
