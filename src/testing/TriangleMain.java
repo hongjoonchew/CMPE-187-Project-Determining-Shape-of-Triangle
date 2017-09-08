@@ -66,10 +66,7 @@ public class TriangleMain {
 		
 		ArrayList<ArrayList<Integer>> numbers = FileTest.readInFromFile("testFile.txt");
 		
-//		if (args.length < 3) {
-//			System.out.println("Not enough arguments");
-//			System.exit(0);
-//		}
+
 		for (int i = 0; i < numbers.size(); i++) {
 			if (numbers.get(i).size() > 3) {
 				System.out.println("Too many inputs, invalid triangle");
@@ -86,23 +83,7 @@ public class TriangleMain {
 			TriangleMain triangle = new TriangleMain(x, y, z);
 			triangle.testTriangle();
 		}
-//		try
-//		{
-//			int x = Integer.parseInt(args[0]);
-//			int y = Integer.parseInt(args[1]);
-//			int z = Integer.parseInt(args[2]);
-//			
-//		}
-//		catch(NumberFormatException e)
-//		{
-//			System.out.println("You can only enter an integer");
-//			System.exit(0);
-//		}
-//		
-//		TriangleMain t = new TriangleMain(x,y,z);
-//		System.out.println("The current integers are " + x + ", " + y + ", and " + z + ".");
-//		t.testTriangle(); //This is where all the tests start. 
-//		
+
 
 	}
 
