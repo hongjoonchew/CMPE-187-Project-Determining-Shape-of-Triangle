@@ -7,9 +7,9 @@ package testing;
  */
 
 public class TriangleMain {
-	private int x;
-	private int y;
-	private int z;
+	private static int x;
+	private static int y;
+	private static int z;
 	
 	public TriangleMain(int x, int y, int z) {
 		this.x = x;
@@ -65,9 +65,19 @@ public class TriangleMain {
 			System.out.println("Not enough arguments");
 			System.exit(0);
 		}
-		int x = Integer.parseInt(args[0]);
-		int y = Integer.parseInt(args[1]);
-		int z = Integer.parseInt(args[2]);
+		try
+		{
+			int x = Integer.parseInt(args[0]);
+			int y = Integer.parseInt(args[1]);
+			int z = Integer.parseInt(args[2]);
+			
+		}
+		catch(NumberFormatException e)
+		{
+			System.out.println("You can only enter an integer");
+			System.exit(0);
+		}
+		
 		TriangleMain t = new TriangleMain(x,y,z);
 		System.out.println("The current integers are " + x + ", " + y + ", and " + z + ".");
 		t.testTriangle(); //This is where all the tests start. 
