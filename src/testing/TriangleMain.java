@@ -58,7 +58,6 @@ public class TriangleMain {
 	}
 	
 	/*
-	 * 
 	 * Main function, where the tests are initialized. The tests will run through a sequence
 	 * of methods, similar to a flowchart.
 	 */
