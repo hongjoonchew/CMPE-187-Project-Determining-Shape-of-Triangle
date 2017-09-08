@@ -80,9 +80,9 @@ public class TriangleMain {
 			int y = numbers.get(i).get(1);
 			int z = numbers.get(i).get(2);
 			TriangleMain triangle = new TriangleMain(x, y, z);
+			System.out.println("The current integers are " + x + ", " + y + ", and " + z + ".");
 			triangle.testTriangle();
 		}
-
 
 	}
 
