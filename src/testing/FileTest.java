@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package filetest;
+package testing;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,6 +16,7 @@ import java.util.Scanner;
  */
 public class FileTest {
 
+	/* fileName is the name of the testing file */
     public static ArrayList<ArrayList<Integer>> readInFromFile (String fileName) {
         ArrayList<ArrayList<Integer>> numbers = new ArrayList<>();
         
@@ -25,6 +26,7 @@ public class FileTest {
         try {
             scanner = new Scanner(file);
             int i = 0;
+            /* check  */
             while(scanner.hasNextLine()) {
                 numbers.add(new ArrayList<Integer>());
                 String currentLine = scanner.nextLine();

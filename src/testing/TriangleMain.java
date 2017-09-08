@@ -2,7 +2,7 @@ package testing;
 
 /*
  * CMPE187 Triangle Test HW1
- * Authors: Hong Joon Chew, Anthony Minaise, Elias Habras, Justin Leinbach
+ * Authors: Hong Joon Chew, Anthony Minaise, Elias Habash, Justin Leinbach
  * 
  */
 
