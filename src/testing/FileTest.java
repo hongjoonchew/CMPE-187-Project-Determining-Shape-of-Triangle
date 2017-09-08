@@ -42,6 +42,8 @@ public class FileTest {
             }
         } catch (FileNotFoundException e) {
             System.out.println(file.toString() + " was not found");
+        } finally {
+        	scanner.close();
         }
       
         return numbers;
